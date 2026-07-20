@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bwkjlvn7f12dk"]
+
+[ext_resource type="Script" uid="uid://cnsk3ccttkqas" path="res://temp/character_body_2d.gd" id="1_n2g3f"]
+[ext_resource type="Texture2D" uid="uid://cpnmutx1n8e7v" path="res://temp/PNG/Cars/suv_military.png" id="1_w30px"]
+[ext_resource type="Texture2D" uid="uid://dntfuqxqqaf7p" path="res://temp/PNG/Characters/man_kart.png" id="2_4jw2g"]
+[ext_resource type="PackedScene" uid="uid://cfs435hk5dpc6" path="res://temp/gun.tscn" id="4_n2g3f"]
+[ext_resource type="PackedScene" uid="uid://pbwnwjxcimrn" path="res://temp/big_dino.tscn" id="5_tt86v"]
+[ext_resource type="PackedScene" uid="uid://cbu6tv1kdxvhv" path="res://temp/little_dino.tscn" id="6_36hlo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2fog"]
+size = Vector2(208, 97)
+
+[node name="MainPrototype" type="Node2D" unique_id=309209197]
+
+[node name="Floor_BG" type="ColorRect" parent="." unique_id=1802349412]
+offset_top = 370.0
+offset_right = 1279.0
+offset_bottom = 720.0
+color = Color(0.8328982, 0.7261276, 0.4729988, 1)
+
+[node name="Forest_BG" type="ColorRect" parent="." unique_id=984609393]
+offset_top = 162.0
+offset_right = 1280.0
+offset_bottom = 370.0
+color = Color(0, 0.6039216, 0, 1)
+
+[node name="Sky_BG" type="ColorRect" parent="." unique_id=221057478]
+offset_right = 1280.0
+offset_bottom = 162.0
+color = Color(0, 0.4509804, 1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1680579818]
+position = Vector2(1053, 527)
+motion_mode = 1
+script = ExtResource("1_n2g3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=558106081]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_n2fog")
+
+[node name="Vehicle" type="Sprite2D" parent="CharacterBody2D" unique_id=1083997897]
+scale = Vector2(8, 8)
+texture = ExtResource("1_w30px")
+
+[node name="Person" type="Sprite2D" parent="CharacterBody2D" unique_id=1207290376]
+position = Vector2(-84, -56)
+scale = Vector2(8, 8)
+texture = ExtResource("2_4jw2g")
+flip_h = true
+
+[node name="Gun" parent="CharacterBody2D" unique_id=1251675159 instance=ExtResource("4_n2g3f")]
+position = Vector2(-91, -43)
+
+[node name="Big_Dino" parent="." unique_id=1188637974 instance=ExtResource("5_tt86v")]
+position = Vector2(152.00002, 393.00003)
+
+[node name="Little_Dino" parent="." unique_id=1514981033 instance=ExtResource("6_36hlo")]
+position = Vector2(352, 535)
+
+[node name="Little_Dino2" parent="." unique_id=1644311390 instance=ExtResource("6_36hlo")]
+position = Vector2(472.99997, 434)
+
+[node name="Little_Dino3" parent="." unique_id=1156696081 instance=ExtResource("6_36hlo")]
+position = Vector2(344, 390)
+
+[node name="Little_Dino4" parent="." unique_id=1044698571 instance=ExtResource("6_36hlo")]
+position = Vector2(497, 639.00006)
+
+[node name="Little_Dino5" parent="." unique_id=727147119 instance=ExtResource("6_36hlo")]
+position = Vector2(203.00003, 642.00006)

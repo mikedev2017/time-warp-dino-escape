@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cbu6tv1kdxvhv"]
+
+[ext_resource type="Texture2D" uid="uid://tkho5snqk6a3" path="res://temp/DinoSprites - tard.png" id="1_reoyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaf3n"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl6ad"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjfdi"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7476m"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7flf"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yncq5"]
+atlas = ExtResource("1_reoyd")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2fog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xaf3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl6ad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjfdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7476m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7flf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yncq5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n2fog"]
+radius = 5.4037023
+
+[node name="Little_Dino" type="Node2D" unique_id=1514981033]
+scale = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1424179032]
+sprite_frames = SubResource("SpriteFrames_n2fog")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380069996]
+shape = SubResource("CircleShape2D_n2fog")
