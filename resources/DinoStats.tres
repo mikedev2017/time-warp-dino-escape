@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="DinoStats" format=3 uid="uid://bc7dm1n684x47"]
-
-[ext_resource type="Script" uid="uid://icnmkfydb6g7" path="res://scripts/DinoStats.gd" id="1_x80y5"]
-
-[resource]
-script = ExtResource("1_x80y5")
-metadata/_custom_type_script = "uid://icnmkfydb6g7"
