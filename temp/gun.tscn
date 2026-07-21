@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cfs435hk5dpc6"]
+
+[ext_resource type="Script" uid="uid://bxadgir7vfaqt" path="res://gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://crhik5xdkah2n" path="res://PNG/Guns/US.png" id="2_kw0bs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2fog"]
+atlas = ExtResource("2_kw0bs")
+region = Rect2(67, 3, 25, 9)
+
+[node name="Gun" type="Node2D" unique_id=1251675159 node_paths=PackedStringArray("fire_rate")]
+script = ExtResource("1_dk5gl")
+fire_rate = NodePath("FireRate")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1540937785]
+position = Vector2(29, -3)
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_n2fog")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2065956875]
+unique_name_in_owner = true
+position = Vector2(69, -8)
+
+[node name="FireRate" type="Timer" parent="." unique_id=149581753]
+wait_time = 0.2
+
+[connection signal="timeout" from="FireRate" to="." method="_on_fire_rate_timeout"]
